@@ -107,3 +107,10 @@
 @push('style-lib')
     <link href="{{ asset($activeTemplateTrue . 'css/order-track.css') }}" rel="stylesheet">
 @endpush
+@push('style')
+<style>
+    .order-track-item .thumb i{
+        color: #000 !important;
+    }
+</style>
+@endpush

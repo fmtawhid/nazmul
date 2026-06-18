@@ -98,7 +98,7 @@
                                     </div>
                                 </div>
 
-                                <div id="slider-range"></div>
+                                <!-- <div id="slider-range"></div> -->
 
                             </div>
                         </div>

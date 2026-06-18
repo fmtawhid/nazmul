@@ -250,7 +250,7 @@
                         .product-details-tab-content {
                             border: 1px solid #ddd;
                             padding: 20px;
-                            background-color: #fff;
+                            background-color: #00000000;
                         }
                     </style>
 

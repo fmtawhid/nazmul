@@ -27,10 +27,10 @@
                     </span>
 
                     <span id="stockBadge"></span>
-                    <a href="https://wa.me/+8801894683430" target="_blank" class="whatsapp-button">
+                    <!-- <a href="https://wa.me/+8801894683430" target="_blank" class="whatsapp-button">
                         <i class="fab fa-whatsapp"></i>
                         <span class="whatsapp-text">Chat on WhatsApp</span>
-                    </a>
+                    </a> -->
 
 
                 </div>
@@ -127,7 +127,7 @@
             .product-title {
                 font-size: 24px;
                 font-weight: 700;
-                color: #557DBF;
+                color: #ffffff;
                 margin-bottom: 10px;
             }
 
@@ -135,14 +135,14 @@
             .ratings-area {
                 margin-bottom: 15px;
                 font-size: 14px;
-                color: #DD4637;
+                color: #ffffff;
             }
 
             /* Product Price */
             .product-price {
                 font-size: 22px;
                 font-weight: 700;
-                color: #DD4637 !important;
+                color: #ffffff !important;
             }
 
             /* Product Summary */
@@ -155,7 +155,7 @@
 
             /* Labels (Categories, Brand, SKU) */
             .product-details-label {
-                color: #DD4637;
+                color: #ffffff;
                 margin-right: 5px;
                 font-weight: 600;
                 font-size: 15px;
@@ -163,7 +163,7 @@
 
             /* Categories, Brand links */
             .product-details a {
-                color: #557DBF;
+                color: #d6d6d6;
                 font-weight: 500;
                 margin-right: 3px;
                 text-decoration: none;
@@ -201,7 +201,7 @@
             .product-wishlist .addToCompare {
                 padding: 10px 15px;
                 border: 1px solid #ccc;
-                color: #557DBF;
+                color: #ffffff;
                 background: transparent;
                 border-radius: 6px;
                 transition: 0.3s ease;
@@ -212,17 +212,36 @@
             .product-wishlist .addToCompare:hover,
             .product-wishlist .add-to-wishlist-btn.active,
             .product-wishlist .addToCompare.active {
-                background: #DD4637;
-                color: #fff;
+                background: #ffffff;
+                color: #000000;
                 border-color: #DD4637;
             }
 
             /* Buy Now and Add to Cart button */
-            .addToCart,
+            /* .addToCart,
             .buy-now-btn {
-                background-color:rgb(26, 56, 104);
+                background-color:rgb(0, 0, 0);
                 color: #fff;
                 border: none;
+                padding: 10px 18px;
+                font-size: 14px;
+                font-weight: 600;
+                border-radius: 5px;
+                transition: all 0.3s ease;
+                border: 1px solid #ccc;
+            }
+
+            .addToCart:hover,
+            .buy-now-btn:hover {
+                background-color: #DD4637;
+            } */
+
+            /* Buy Now and Add to Cart button */
+            .addToCart,
+            .buy-now-btn {
+                background-color: #000;
+                color: #fff;
+                border: 1px solid #ccc;
                 padding: 10px 18px;
                 font-size: 14px;
                 font-weight: 600;
@@ -231,8 +250,15 @@
             }
 
             .addToCart:hover,
-            .buy-now-btn:hover {
-                background-color: #DD4637;
+            .buy-now-btn:hover,
+            .addToCart:focus,
+            .buy-now-btn:focus,
+            .addToCart:active,
+            .buy-now-btn:active {
+                background: #ffffff !important;
+                color: #000000 !important;
+                border-color: #a7a7a7 !important;
+                box-shadow: none !important;
             }
 
             /* View details button */
@@ -342,12 +368,10 @@
         <div class="card mt-4 border border-danger">
             <div class="card-body text-dark p-3">
                 <p class="mb-0" style="font-size: 16px;">
-                    প্রযুক্তি পণ্যের বাজার অস্থিতিশীল হওয়ার কারণে যেকোন সময় মূল্য পরিবর্তন হতে পারে। তাই, অর্ডার করার পূর্বে পণ্যের মূল্য, স্টক ও ডেলিভারি সম্পর্কে জিজ্ঞাসা করতে যোগাযোগ করুন 
-                    <strong>01894-683430</strong> ই নাম্বারে
+                    পণ্যের রং, সাইজ ও স্টক সময়ে সময়ে পরিবর্তিত হতে পারে। অর্ডার নিশ্চিত করার পূর্বে প্রয়োজনীয় তথ্য যাচাই করে নিন। পণ্য ডেলিভারির সময় ডেলিভারি ম্যানের উপস্থিতিতে পণ্যটি পরীক্ষা করে বুঝে গ্রহণ করুন এবং সন্তুষ্ট হলে মূল্য পরিশোধ করুন।
                 </p>
             </div>
         </div>
-
     </div>
 </div>
 </div>
