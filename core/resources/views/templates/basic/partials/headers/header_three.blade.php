@@ -25,45 +25,12 @@
                     @foreach ($headerThree->group as $key => $group)
                         @if ($key == 'category_widget' && isset($group->status) && $group->status == 'on')
                             <div class="d-none d-lg-block view-category-wrapper">
-                                <!-- <div class="view-category">
+                                <div class="view-category">
                                     <div class="menu-category-btn" @if (@$group->background_color) style="background-color: {{ '#' . $group->background_color }}" @endif>
                                         <x-svg.category-icon />
                                         @lang('Categories')
                                     </div>
-                                </div> -->
-
-
-                                <div class="view-category d-flex align-items-center">
-                                    <a href="{{ route('home') }}" class="header-three-logo-text">
-                                        {{ gs('site_name') }}
-                                    </a>
                                 </div>
-                                @push('style')
-                                <style>
-                                    .header-three-logo-text {
-                                        color: #fff;
-                                        font-size: 22px;
-                                        font-weight: 700;
-                                        text-decoration: none;
-                                        display: flex;
-                                        align-items: center;
-                                        height: 100%;
-                                    }
-
-                                    .header-three-logo-text:hover {
-                                        color: #fff;
-                                    }
-                                </style>
-                                @endpush
-                               
-                               
-                          
-                                <!-- <div class="view-category d-flex align-items-center">
-                                    <a href="{{ route('home') }}" class="header-three-logo">
-                                        <x-site-logo type="dark" />
-                                    </a>
-                                </div> -->
-                                
 
                                 <div class="category-dropdown-menu">
                                     @include('Template::partials.left_category_menu', ['limit' => null])
@@ -133,52 +100,18 @@
 @push('style')
     <style>
         .header-bottom {
-            background-color: #{{ $headerColor }}
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .header-bottom:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
         }
 
         .menu li a.active {
             background-color: #ffffff33;
         }
     </style>
-@endpush
-@push('style')
-<style>
-    .header-bottom {
-        background: rgba(20, 20, 20, 0.65) !important;
-        backdrop-filter: blur(12px);
-        -webkit-backdrop-filter: blur(12px);
-
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 9999;
-
-        border-bottom: 1px solid rgba(255,255,255,0.1);
-        transition: all .3s ease;
-    }
-
-    .menu li a.active {
-        background-color: rgba(255,255,255,.15);
-    }
-
-    .header-three-logo-text {
-        color: #fff;
-        font-size: 22px;
-        font-weight: 700;
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-        height: 100%;
-    }
-
-    .header-three-logo-text:hover {
-        color: #fff;
-    }
-
-    /* Fixed menu এর জন্য content নিচে নামানো */
-    body {
-        padding-top: 70px;
-    }
-</style>
 @endpush

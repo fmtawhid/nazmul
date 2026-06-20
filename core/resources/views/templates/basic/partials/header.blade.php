@@ -5,10 +5,18 @@
  @endphp
 
 
- <div class="header-area bg-white">
+@push('style')
+    <style>
+        .header-area {
+            background-color: transparent;
+        }
+    </style>
+@endpush
+
+ <div class="header-area">
      @foreach ($headers as $header)
      @include('Template::partials.headers.'.$header)
      @endforeach
  </div>
 
- @include('Template::partials.mobile_menu')
+ <!-- @include('Template::partials.mobile_menu') -->

@@ -14,7 +14,7 @@
                     <td class="cart-item-wrapper">
                         <a href="{{ $product->link() }}" class="cart-item">
                             <div class="cart-img">
-                                <img src="{{ getImage(null) }}" data-src="{{ $product->mainImage() }}" class="lazyload" alt="@lang('cart')">
+                                <img src="{{ getImage(null) }}" data-src="{{ $product->mainImage() }}" class="lazyload" alt="@lang('Bag')">
                             </div>
                             <div class="cart-cont">
                                 <h6 class="title">{{ $product->name }}</h6>

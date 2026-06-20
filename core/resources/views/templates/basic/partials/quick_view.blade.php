@@ -47,9 +47,13 @@
                     .product-summary ul li {
                         list-style-type: disc !important;
                         display: list-item !important;
+                        color: #1F201B;
                     }
                     .product-summary ul {
                         margin-left: 20px !important;
+                    }
+                    .product-summary {
+                        background-color: transparent;
                     }
                 </style>
             @endif
@@ -66,14 +70,14 @@
                 @endforelse
             </span>
 
-            <span>
+            <!-- <span>
                 <h3 class="product-details-label d-inline">@lang('Brand'):</h3>
                 @if ($product->brand)
                     <a href="{{ $product->brand->shopLink() }}">{{ __($product->brand->name) }}</a>
                 @else
                     @lang('Non Brand')
                 @endif
-            </span>
+            </span> -->
 
             <span>
                 <b class="product-details-label">@lang('SKU'):</b> <span
@@ -82,6 +86,17 @@
 
         </div>
         <style>
+            /* Page Background Color */
+            .product-details-container {
+                background-color: #F4F0EA;
+                padding: 20px;
+                border-radius: 8px;
+            }
+
+            .product-details {
+                background-color: transparent;
+            }
+
             .whatsapp-button {
                 display: inline-flex;
                 align-items: center;
@@ -127,7 +142,7 @@
             .product-title {
                 font-size: 24px;
                 font-weight: 700;
-                color: #ffffff;
+                color: #1F201B;
                 margin-bottom: 10px;
             }
 
@@ -135,14 +150,14 @@
             .ratings-area {
                 margin-bottom: 15px;
                 font-size: 14px;
-                color: #ffffff;
+                color: #1F201B;
             }
 
             /* Product Price */
             .product-price {
                 font-size: 22px;
                 font-weight: 700;
-                color: #ffffff !important;
+                color: #1F201B !important;
             }
 
             /* Product Summary */
@@ -150,12 +165,12 @@
                 margin-top: 20px;
                 margin-bottom: 20px;
                 font-size: 15px;
-                color: #555;
+                color: #1F201B;
             }
 
             /* Labels (Categories, Brand, SKU) */
             .product-details-label {
-                color: #ffffff;
+                color: #1F201B;
                 margin-right: 5px;
                 font-weight: 600;
                 font-size: 15px;
@@ -163,7 +178,7 @@
 
             /* Categories, Brand links */
             .product-details a {
-                color: #d6d6d6;
+                color: #1F201B;
                 font-weight: 500;
                 margin-right: 3px;
                 text-decoration: none;
@@ -177,10 +192,9 @@
             .attribute-name {
                 display: inline-block;
                 margin: 4px 0 5px;
-                color: #557DBF;
+                color: #1F201B;
                 font-weight: 600;
-                color: black !important;
-                font-size: 18px !important;
+                font-size: 18px;
             }
 
             .attribute-value-wrapper {
@@ -201,7 +215,7 @@
             .product-wishlist .addToCompare {
                 padding: 10px 15px;
                 border: 1px solid #ccc;
-                color: #ffffff;
+                color: #1F201B;
                 background: transparent;
                 border-radius: 6px;
                 transition: 0.3s ease;
@@ -212,59 +226,15 @@
             .product-wishlist .addToCompare:hover,
             .product-wishlist .add-to-wishlist-btn.active,
             .product-wishlist .addToCompare.active {
-                background: #ffffff;
-                color: #000000;
-                border-color: #DD4637;
-            }
-
-            /* Buy Now and Add to Cart button */
-            /* .addToCart,
-            .buy-now-btn {
-                background-color:rgb(0, 0, 0);
-                color: #fff;
-                border: none;
-                padding: 10px 18px;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 5px;
-                transition: all 0.3s ease;
-                border: 1px solid #ccc;
-            }
-
-            .addToCart:hover,
-            .buy-now-btn:hover {
-                background-color: #DD4637;
-            } */
-
-            /* Buy Now and Add to Cart button */
-            .addToCart,
-            .buy-now-btn {
-                background-color: #000;
-                color: #fff;
-                border: 1px solid #ccc;
-                padding: 10px 18px;
-                font-size: 14px;
-                font-weight: 600;
-                border-radius: 5px;
-                transition: all 0.3s ease;
-            }
-
-            .addToCart:hover,
-            .buy-now-btn:hover,
-            .addToCart:focus,
-            .buy-now-btn:focus,
-            .addToCart:active,
-            .buy-now-btn:active {
-                background: #ffffff !important;
-                color: #000000 !important;
-                border-color: #a7a7a7 !important;
-                box-shadow: none !important;
+                background: #1F201B;
+                color: #F4F0EA;
+                border-color: #1F201B;
             }
 
             /* View details button */
             .btn.outline {
-                border: 1px solid #557DBF;
-                color: #557DBF;
+                border: 1px solid #1F201B;
+                color: #1F201B;
                 padding: 8px 16px;
                 font-size: 14px;
                 border-radius: 5px;
@@ -272,8 +242,8 @@
             }
 
             .btn.outline:hover {
-                background-color: #557DBF;
-                color: white;
+                background-color: #1F201B;
+                color: #F4F0EA;
             }
 
         </style>
@@ -323,10 +293,10 @@
                 <x-frontend.quantity-input :isDigital="$product->is_downloadable" data-update="no" />
 
                 {{-- --- Add to Cart (keeps old behaviour) --- --}}
-                <button type="button" class="btn btn--base btn--sm addToCart flex-shrink-0"
+                <!-- <button type="button" class="btn btn--base btn--sm addToCart flex-shrink-0"
                     data-id="{{ $product->id }}" data-product_type="{{ $product->product_type }}"
                     @disabled(!$product->salePrice())>
-                    @lang('Add to Cart')
+                    @lang('Add to Bag')
                 </button>
 
                 {{-- --- Buy Now (new ➜ posts then redirects) --- --}}
@@ -334,7 +304,7 @@
                     data-id="{{ $product->id }}" data-product_type="{{ $product->product_type }}"
                     @disabled(!$product->salePrice())>
                     @lang('Buy Now')
-                </button>
+                </button> -->
             </div>
             <div class="product-wishlist d-flex gap-2 mt-3 mb-3">
 
@@ -344,13 +314,27 @@
                         <span class="wish-icon"></span> @lang('Wishlist')
                     </button>
                 @endif
+                <button type="button" class="add-to-wishlist-btn addToCart flex-shrink-0"
+                    data-id="{{ $product->id }}" data-product_type="{{ $product->product_type }}"
+                    @disabled(!$product->salePrice())>
+                    @lang('Add to Bag')
+                </button>
 
-                @if (gs('product_compare'))
+                {{-- --- Buy Now (new ➜ posts then redirects) --- --}}
+                <button type="button" class="add-to-wishlist-btn addToCart buy-now-btn flex-shrink-0"
+                    data-id="{{ $product->id }}" data-product_type="{{ $product->product_type }}"
+                    @disabled(!$product->salePrice())>
+                    @lang('Buy Now')
+                </button>
+
+                <!-- @if (gs('product_compare'))
                     <button class="add-to-wishlist-btn  @if (checkCompareList($product->id)) active @endif addToCompare"
                         data-id="{{ $product->id }}">
                         <i class="las la-exchange-alt compare-icon"></i> @lang('Compare')
                     </button>
-                @endif
+                @endif -->
+
+                
             </div>
             
         </div>

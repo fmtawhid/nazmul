@@ -11,7 +11,7 @@
         <div class="site-sidebar cart-sidebar-area" id="cart-sidebar-area">
             <button class="sidebar-close-btn"><i class="las la-times"></i></button>
             <div class="top-content d-flex gap-2">
-                <h5 class="cart-sidebar-area__title">@lang('My Cart')</h5> <a href="{{ route('cart.page') }}" class="text-muted text-decoration-underline">@lang('Cart Page')</a>
+                <h5 class="cart-sidebar-area__title">@lang('My Bag')</h5> <a href="{{ route('cart.page') }}" class="text-muted text-decoration-underline">@lang('Bag Page')</a>
             </div>
             <div class="cart-products cart--products"></div>
         </div>

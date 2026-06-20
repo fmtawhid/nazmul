@@ -99,10 +99,10 @@
         </div>
         {{-- @if ($showCartButton)
             @if ($product->productVariants->count())
-                <button class="quickViewBtn add-to-cart-btn" data-product="{{ $product->slug }}"><i class="las la-shopping-bag"></i> @lang('Add to Cart')</button>
+                <button class="quickViewBtn add-to-cart-btn" data-product="{{ $product->slug }}"><i class="las la-shopping-bag"></i> @lang('Add to Bag')</button>
             @else
                 <input type="hidden" name="quantity" value="1">
-                <button tyepe="button" class="addToCart add-to-cart-btn" data-id="{{ $product->id }}" data-product_type="{{ $product->product_type }}"><i class="las la-shopping-bag"></i> @lang('Add to Cart')</button>
+                <button tyepe="button" class="addToCart add-to-cart-btn" data-id="{{ $product->id }}" data-product_type="{{ $product->product_type }}"><i class="las la-shopping-bag"></i> @lang('Add to Bag')</button>
             @endif
         @endif
         @if ($showCartButton)
@@ -181,8 +181,8 @@
         height: 40px;
         border-radius: 50%;
         background-color: transparent;
-        border: 2px solid #fff;
-        color: #fff;
+        border: 2px solid #1F201B;
+        color: #1F201B;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -193,17 +193,17 @@
     .product-card-buttons .addToCompare:hover,
     .product-card-buttons .addToWishlist:hover {
         background-color: transparent;
-        color: #fff;
-        border-color: #fff;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        color: #1F201B;
+        border-color: #1F201B;
+        box-shadow: 0 0 15px rgba(31, 32, 27, 0.3);
     }
 
     .product-card-buttons .addToCompare.active,
     .product-card-buttons .addToWishlist.active {
         background-color: transparent;
-        color: #fff;
-        border-color: #fff;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        color: #1F201B;
+        border-color: #1F201B;
+        box-shadow: 0 0 15px rgba(31, 32, 27, 0.3);
     }
 
     .product-card-buttons .quickViewBtn {
@@ -211,8 +211,8 @@
         height: 40px;
         border-radius: 50%;
         background-color: transparent;
-        border: 2px solid #fff;
-        color: #fff;
+        border: 2px solid #1F201B;
+        color: #1F201B;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -222,9 +222,9 @@
 
     .product-card-buttons .quickViewBtn:hover {
         background-color: transparent;
-        color: #fff;
-        border-color: #fff;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        color: #1F201B;
+        border-color: #1F201B;
+        box-shadow: 0 0 15px rgba(31, 32, 27, 0.3);
     }
 
     /* Bottom Button Group Styling */
@@ -238,9 +238,9 @@
     .button-group .add-to-cart-btn,
     .button-group .buy-now-btn {
         padding: 10px 16px;
-        border: 2px solid #fff;
+        border: 2px solid #1F201B;
         background-color: transparent;
-        color: #fff;
+        color: #1F201B;
         font-weight: 600;
         font-size: 13px;
         border-radius: 4px;
@@ -256,22 +256,22 @@
 
     .button-group .add-to-cart-btn:hover {
         background-color: transparent;
-        border-color: #fff;
-        color: #fff;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        border-color: #1F201B;
+        color: #1F201B;
+        box-shadow: 0 0 20px rgba(31, 32, 27, 0.3);
     }
 
     .button-group .buy-now-btn {
         background-color: transparent;
-        color: #fff;
-        border-color: #fff;
+        color: #1F201B;
+        border-color: #1F201B;
     }
 
     .button-group .buy-now-btn:hover {
         background-color: transparent;
-        border-color: #fff;
-        color: #fff;
-        box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+        border-color: #1F201B;
+        color: #1F201B;
+        box-shadow: 0 0 20px rgba(31, 32, 27, 0.3);
     }
 
     /* Remove Wishlist Button Styling */
@@ -283,8 +283,8 @@
         height: 32px;
         border-radius: 50%;
         background-color: transparent;
-        border: 2px solid #fff;
-        color: #fff;
+        border: 2px solid #1F201B;
+        color: #1F201B;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -295,9 +295,9 @@
 
     .removeWishlist:hover {
         background-color: transparent;
-        color: #fff;
-        border-color: #fff;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+        color: #1F201B;
+        border-color: #1F201B;
+        box-shadow: 0 0 15px rgba(31, 32, 27, 0.3);
     }
 
     /* Responsive Design */

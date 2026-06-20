@@ -8,6 +8,21 @@
     $headerTwoLayoutClass = 'middle-menu-' . implode('', $firstLetters);
 @endphp
 
+@push('style')
+    <style>
+        .header-middle {
+            background-color: transparent;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .header-middle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+        }
+    </style>
+@endpush
+
 @if (@$headerTwo->status == 'on')
     <div class="header-middle">
         <div class="container">
@@ -67,7 +82,7 @@
                                                     <i class="las la-shopping-bag"></i>
                                                     <span class="ecommerce__is cartItemCount d-none"></span>
                                                 </span>
-                                                <span class="ecommerce__text">@lang('Cart')</span>
+                                                <span class="ecommerce__text">@lang('Bag')</span>
                                             </a>
                                         </li>
                                         
@@ -94,7 +109,7 @@
                                         </li>
                                     @endif
                                 @endforeach
-                                <li class="d-none d-lg-block">
+                                <!-- <li class="d-none d-lg-block">
                                     <a href="{{ route('multi_express.deal.index') }}" 
                                     class="ecommerce deal-btn"
                                     style="background: linear-gradient(135deg, #423fce, #db4437); color: #fff; border: none; padding: 10px 20px; border-radius: 8px; text-decoration: none; display: inline-block; transition: all 0.3s ease;">
@@ -103,7 +118,7 @@
                                         </span>
                                         <span class="" style="color:#fff;">@lang('Deals')</span>
                                     </a>
-                                </li>
+                                </li> -->
 
                             </ul>
                         @endif

@@ -216,6 +216,7 @@
                             border-bottom: none;
                             margin-bottom: 20px;
                             gap: 10px;
+                            background-color: transparent;
                         }
                         .nav-tabs .nav-item {
                             text-align: center;
@@ -225,18 +226,21 @@
                             padding: 12px 15px;
                             font-size: 14px;
                             font-weight: 600;
-                            border: 1px solid #ddd;
+                            border: 2px solid #1F201B;
                             transition: all 0.3s ease;
                             width: 100%;
+                            color: #1F201B;
+                            background-color: transparent;
                         }
                         .nav-tabs .nav-item .nav-link:hover {
-                            background-color: #f1f1f1;
-                            border-color: #bbb;
+                            background-color: #F4F0EA;
+                            border-color: #1F201B;
+                            color: #1F201B;
                         }
                         .nav-tabs .nav-item .nav-link.active {
-                            background-color: #000000;
-                            color: white;
-                            border-color: #ffffff;
+                            background-color: #1F201B;
+                            color: #F4F0EA;
+                            border-color: #1F201B;
                             font-weight: 700;
                         }
                         @media (max-width: 576px) {
@@ -248,9 +252,22 @@
                             }
                         }
                         .product-details-tab-content {
-                            border: 1px solid #ddd;
+                            border: 2px solid #1F201B;
                             padding: 20px;
-                            background-color: #00000000;
+                            background-color: #F4F0EA;
+                            color: #1F201B;
+                        }
+                        
+                        .product-details-tab-content h1,
+                        .product-details-tab-content h2,
+                        .product-details-tab-content h3,
+                        .product-details-tab-content h4,
+                        .product-details-tab-content h5,
+                        .product-details-tab-content h6,
+                        .product-details-tab-content p,
+                        .product-details-tab-content span,
+                        .product-details-tab-content a {
+                            color: #1F201B;
                         }
                     </style>
 
@@ -261,6 +278,29 @@
         </div>
     </div>
 @endsection
+
+@push('style')
+    <style>
+        .py-60 {
+            background-color: #F4F0EA;
+        }
+        
+        .py-60 .container {
+            background-color: transparent;
+        }
+        
+        .py-60 h1,
+        .py-60 h2,
+        .py-60 h3,
+        .py-60 h4,
+        .py-60 h5,
+        .py-60 h6,
+        .py-60 p,
+        .py-60 span {
+            color: #1F201B;
+        }
+    </style>
+@endpush
 
 @push('script')
     <script>

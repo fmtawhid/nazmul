@@ -11,7 +11,7 @@
     --base-s: 89%;
     --base-l: 56%;
 
-    --base: white;
+    --base: #1F201B;
     --base-100: var(--base-h) calc(var(--base-s) - 7%) calc(var(--base-l) + 15%);
     --base-200: var(--base-h) calc(var(--base-s) - 7%) calc(var(--base-l) + 10%);
     --base-300: var(--base-h) calc(var(--base-s) - 7%) calc(var(--base-l) + 8%);
@@ -79,14 +79,14 @@
     --text-l: 13%;
     --text: var(--text-h) var(--text-s) var(--text-l);
     --text-light: var(--text-h) calc(var(--text-s) - 16%) calc(var(--text-l) + 60%);
-    --heading-color: white;
+    --heading-color: hsl(var(--heading));
     --border: 0 0% 90%;
     --box-shadow: 0 16px 19px 7px hsl(var(--black) / 0.08);
     --gray-color: 0 0 87%;
 }
 
 html {
-    color: #ffffff;
+    color: hsl(var(--base));
     font-size: 1rem;
     line-height: 1.15;
     scroll-behavior: smooth;
@@ -307,10 +307,10 @@ template {
 body {
     font-size: 0.875rem;
     /* color: hsl(var(--body-color)); */
-    color: #ffffff !important;
+    color: #1F201B !important;
     font-family: var(--body-font);
     /* background: hsl(var(--white)); */
-    background: black;
+    background: #F4F0EA;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -329,15 +329,15 @@ body *::-webkit-scrollbar {
     height: 4px;
 }
 
-*::selection {
-    background-color: hsl(var(--base));
+/* *::selection {
+    background-color: var(--base);
     color: hsl(var(--white)) !important;
 }
 
 ::selection {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background: hsl(var(--base));
-}
+} */
 
 
 
@@ -351,7 +351,7 @@ h6 {
     font-weight: 500;
     margin: 0;
     line-height: 1.3;
-    color: white;
+    color: #1F201B;
     font-family: var(--heading-font);
 }
 
@@ -361,7 +361,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-    color: white;
+    color: #1F201B;
 }
 
 h1 a:hover,
@@ -465,7 +465,7 @@ select,
 input,
 textarea,
 button {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border: 1px solid hsl(var(--border));
     outline: none;
 }
@@ -519,7 +519,7 @@ button:focus {
 input[type='submit'] {
     cursor: pointer;
     background-color: #1893f0;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     font-weight: 700;
     padding: 0;
 }
@@ -541,7 +541,7 @@ input[type='submit'] {
     width: 100%;
     height: 100%;
     display: block;
-    background-color: hsl(var(--black) / 0.54);
+    background-color: #F4F0EA;
     z-index: 991;
     content: '';
     left: 0;
@@ -942,7 +942,7 @@ input[type='submit'] {
 }
 
 .social-icons li a:hover {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background: hsl(var(--base));
 }
 
@@ -1197,7 +1197,7 @@ input[type='submit'] {
 }
 
 .menu li a {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     font-size: 0.875rem;
 }
 
@@ -1290,11 +1290,11 @@ input[type='submit'] {
     .menu li .submenu li a.active {
         padding-left: 20px;
         background: hsl(var(--base));
-        color: hsl(var(--white));
+        color: hsl(var(--base));
     }
 
     .menu li .submenu li a.active::after {
-        color: hsl(var(--white));
+        color: hsl(var(--base));
     }
 
     .menu li .submenu li:hover {
@@ -1304,11 +1304,11 @@ input[type='submit'] {
     .menu li .submenu li:hover>a {
         padding-left: 20px;
         background: hsl(var(--base));
-        color: hsl(var(--white));
+        color: hsl(var(--base));
     }
 
     .menu li .submenu li:hover>a::after {
-        color: hsl(var(--white));
+        color: hsl(var(--base));
     }
 
     .menu li .submenu li:first-child {
@@ -1353,7 +1353,7 @@ input[type='submit'] {
     display: inline-block;
     height: 2px;
     width: 25px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
 }
 
 .header-top {
@@ -1599,7 +1599,7 @@ a.dropdown-menu__item:last-child {
         height: 0;
         left: 0;
         top: 0;
-        background-color: hsl(var(--white));
+        background-color: hsl(var(--base));
         display: flex;
         align-items: center;
         z-index: 9;
@@ -1651,7 +1651,7 @@ a.dropdown-menu__item:last-child {
         height: 0;
         left: 0;
         top: 0;
-        background-color: hsl(var(--white));
+        background-color: hsl(var(--base));
         display: flex;
         align-items: center;
         z-index: 9;
@@ -1728,7 +1728,7 @@ a.dropdown-menu__item:last-child {
 .header-search-form .icon {
     min-width: 50px;
     border: none;
-    color: hsl(0deg 0% 0% / 25%);
+    color: hsl(var(--base)); 
     position: absolute;
     right: 0px;
     background: transparent;
@@ -1802,7 +1802,7 @@ a.dropdown-menu__item:last-child {
 }
 
 .mobile-menu .nav-tabs li a.active {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .header-bottom {
@@ -1816,7 +1816,7 @@ a.dropdown-menu__item:last-child {
     right: 0;
     width: 100%;
     z-index: 911;
-    background: hsl(var(--white));
+    background: #f4f0ea69;
     transition: 0.3s linear;
     animation: slide-down 0.5s;
 }
@@ -1852,7 +1852,7 @@ a.dropdown-menu__item:last-child {
     font-size: 14px;
     padding: 12px 20px;
     border-radius: 0px;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background-color: hsl(var(--base-800));
     width: 100%;
     height: 100%;
@@ -1986,7 +1986,7 @@ a.dropdown-menu__item:last-child {
 .filter-in {
     font-size: 0.875rem;
     text-align: center;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     border-radius: 3px;
     margin: 1px;
     cursor: pointer;
@@ -2155,7 +2155,7 @@ a.dropdown-menu__item:last-child {
     content: '\f00c';
     position: absolute;
     background: hsl(var(--white));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     font-weight: 600;
     z-index: 1;
     font-family: 'Line Awesome Free';
@@ -2396,7 +2396,7 @@ a.dropdown-menu__item:last-child {
 }
 
 .subscribe-form button {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     height: 40px !important;
     background: hsl(var(--base));
     border-radius: 5px !important;
@@ -2571,7 +2571,7 @@ table .cart-item .cart-img {
 }
 
 .cart-sidebar-area {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     max-width: 350px;
     width: 100%;
     height: 100vh;
@@ -2595,12 +2595,12 @@ table .cart-item .cart-img {
 .cart-sidebar-area .custom-button {
     font-size: 14px;
     background: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .cart-sidebar-area .custom-button:hover {
     background-color: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .cart-sidebar-area.active {
@@ -2858,7 +2858,7 @@ table .cart-item .cart-img {
     display: inline-block;
     font-size: 10px;
     color: hsl(var(--black));
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     padding: 2px 18px;
     border-radius: 5px;
     text-transform: uppercase;
@@ -2879,7 +2879,7 @@ table .cart-item .cart-img {
     width: 280px;
     position: relative;
     z-index: 99;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border-radius: 4px;
 }
 
@@ -3222,7 +3222,7 @@ button.owl-next.disabled {
     left: 35px;
     top: 35px;
     padding: 8px 15px;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     z-index: 1;
 }
 
@@ -3240,7 +3240,7 @@ button.owl-next.disabled {
     padding: 15px;
     position: relative;
     overflow: hidden;
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--base);
     border-radius: 5px;
     transition: all ease 0.3s;
     height: 100%;
@@ -3346,7 +3346,7 @@ button.owl-next.disabled {
 .product-card .product-content .price,
 .best-sell-item .price {
     font-weight: 600;
-    color: #ffffff;
+    color: hsl(var(--base));
     font-size: 0.875rem;
     overscroll-behavior: contain;
 }
@@ -3563,7 +3563,7 @@ button.owl-next.disabled {
 .product-details .product-share a {
     background: hsl(var(--white));
     padding: 5px 12px;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     border-radius: 3px;
     margin: 0 2px;
     border: 1px solid #ebebeb;
@@ -3755,7 +3755,7 @@ button.owl-next.disabled {
 
 .attribute-value-wrapper .attribute-value.active .text-attribute {
     background-color: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     border-color: hsl(var(--base));
 }
 
@@ -3779,7 +3779,7 @@ button.owl-next.disabled {
     font-family: "Line Awesome Free";
     top: 50%;
     left: 50%;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     transform: translate(-50%, -50%);
     font-size: 0.875rem;
 }
@@ -3946,7 +3946,7 @@ button.owl-next.disabled {
 .submit-button {
     height: 60px;
     background: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     font-weight: 500;
 }
 
@@ -4326,7 +4326,7 @@ button:disabled {
     left: 0;
     z-index: 9999999;
     text-align: center;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -4368,7 +4368,7 @@ button:disabled {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: 20px;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .preloader .preloader-icon i {
@@ -4419,7 +4419,7 @@ button:disabled {
     height: 35px;
     line-height: 35px;
     background: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     z-index: 999;
     bottom: 70px;
     right: 10px;
@@ -4447,7 +4447,7 @@ button:disabled {
 }
 
 .scrollToTop:hover {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .scrollToTop.active {
@@ -4497,7 +4497,7 @@ button:disabled {
 .pagination .page-item:hover span,
 .pagination .page-item:hover a {
     background: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     border: 1px solid hsl(var(--base));
 }
 
@@ -4766,7 +4766,7 @@ input::file-selector-button {
 }
 
 .sidebar-nav .contact-group label {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .form--radio .form-check-input {
@@ -4915,7 +4915,7 @@ input::file-selector-button {
     position: absolute;
     left: 100%;
     min-width: 830px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.12);
     border: 1px solid hsl(var(--border));
     opacity: 0;
@@ -5021,7 +5021,7 @@ input::file-selector-button {
 /* button design start here */
 .btn--primary {
     background-color: #007bff;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .btn--sm {
@@ -5030,22 +5030,22 @@ input::file-selector-button {
 }
 
 .btn--primary:hover {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background-color: #6457f3;
 }
 
 .btn--secondary {
     background-color: #adb5bd;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .btn--secondary:hover {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background-color: #636c75;
 }
 
 .btn--dark {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background-color: #343a40;
     border-color: #343a40;
 }
@@ -5055,23 +5055,23 @@ input::file-selector-button {
 }
 
 .btn--dark:hover {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background-color: #23272b;
     border-color: #1d2124;
 }
 
 .btn--success {
     background-color: #17d605;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .btn--success:hover {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background-color: #13af59;
 }
 
 .btn--danger {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background-color: #f75959;
 }
 
@@ -5097,22 +5097,22 @@ input::file-selector-button {
 
 .btn--warning {
     background-color: #ff9e42;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .btn--warning:hover {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     background-color: #d47c29;
 }
 
 .btn--info {
     background-color: #17a2b8;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .btn--info:hover {
     background-color: #0e7bbe;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 /* Form Control Start */
@@ -5123,7 +5123,7 @@ input::file-selector-button {
     outline: none !important;
     width: 100%;
     padding: 10px 20px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border: 1px solid hsl(var(--black) / 0.1);
     color: hsl(var(--black) / 0.7);
     line-height: 1;
@@ -5245,7 +5245,7 @@ input#confirm-password {
     border: 1px solid hsl(var(--black) / 0.1);
     height: 45px;
     width: 100%;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border-radius: 5px;
     color: #6f6f6f;
 }
@@ -5257,7 +5257,7 @@ input#confirm-password {
 
 .form--check .form-check-input {
     box-shadow: none;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     box-shadow: none !important;
     border: 0;
     position: relative;
@@ -5283,7 +5283,7 @@ input#confirm-password {
     content: '\f00c';
     font-family: 'Font Awesome 5 Free';
     font-weight: 600;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -5385,7 +5385,7 @@ input#confirm-password {
     content: '';
     width: 28px;
     height: 28px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     top: 50%;
     transform: translateY(-50%);
     border-radius: 2px;
@@ -5453,7 +5453,7 @@ label.required:after {
     flex-shrink: 0;
     font-size: 1.5rem;
     line-height: 1;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 @media (max-width: 575px) {
@@ -5484,7 +5484,7 @@ label.required:after {
 }
 
 .cart-bottom {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
 }
 
 .size {
@@ -5514,7 +5514,7 @@ label.required:after {
 }
 
 .cart {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border-radius: 5px;
     border: 1px solid hsl(var(--border));
 }
@@ -5619,7 +5619,7 @@ label.required:after {
 
 .apply-coupon-code button {
     background: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     padding-inline: 16px;
     border-radius: 0 5px 5px 0;
 }
@@ -5652,7 +5652,7 @@ label.required:after {
 label {
     font-size: 0.875rem;
     font-weight: 400;
-    color: white;
+    color: hsl(var(--base));
 }
 
 .list-view-active .single_content__info {
@@ -5660,7 +5660,7 @@ label {
 }
 
 .t-link--base:hover {
-    color: white !important;
+    color: hsl(var(--base)) !important;
 }
 
 .text--base {
@@ -5680,7 +5680,7 @@ label {
 }
 
 .text--white {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .text--secondary {
@@ -5712,14 +5712,14 @@ label {
 
 .btn--base {
     /* background: hsl(var(--base)); */
-    color: hsl(var(--white)) !important;
-    border: 1px solid white !important;
+    color: hsl(var(--base)) !important;
+    border: 1px solid var(--base) !important;
 }
 
 .btn--base:hover,
 .btn--base:active {
     color: hsl(var(--white)) !important;
-    background: hsl(var(--base) / 0.9) !important;
+    background: var(--base) !important;
 }
 
 .btn--base:disabled,
@@ -5740,7 +5740,7 @@ label {
 
 .btn--base:hover,
 .btn--danger:hover {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .btn--danger.active {
@@ -5921,7 +5921,7 @@ label {
 .about-banner__title {
     margin: 0;
     text-align: center;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     font-size: clamp(1rem, 1.8vw + 1rem, 1.5rem);
 }
 
@@ -6091,7 +6091,7 @@ small,
     text-align: center;
     font-size: 24px;
     line-height: 1;
-    color: hsl(var(--text-light)); 
+    color: #1F201B; 
 }
 
 .ecommerce__text {
@@ -6121,7 +6121,7 @@ small,
     right: -10px;
     border-radius: 50%;
     background: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     font-size: 10px;
 }
 
@@ -6426,7 +6426,7 @@ small,
     flex-shrink: 0;
     border-radius: 50%;
     background: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     line-height: 1;
 }
 
@@ -6602,7 +6602,7 @@ small,
 .cart-icon-design a .items,
 .cart-icon-design button .amount,
 .cart-icon-design a .amount {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     text-align: left;
 }
 
@@ -6727,7 +6727,7 @@ small,
     font-size: 1rem;
     border: 1px solid hsl(var(--black) / 0.1);
     border-radius: 5px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
 }
 
 .select2.select2-container.select2-container--default.select2-container--below.select2-container--open .select2-selection__rendered {
@@ -6800,7 +6800,7 @@ input.select2-search__field:focus {
 
 .select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
     background-color: hsl(var(--base));
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .select2-container--default .select2-results__option--selected {
@@ -7042,7 +7042,7 @@ Auth Section
 }
 
 .auth-section--light {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
 }
 
 .auth-section--base {
@@ -7185,7 +7185,7 @@ Auth Section
 /* Table Css Start */
 
 .dashboard-table {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border-radius: 8px;
     border: 1px solid hsl(var(--border));
 }
@@ -7302,7 +7302,7 @@ Auth Section
 
 .table tbody {
     border: 0 !important;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
 }
 
 .table tbody tr {
@@ -7614,7 +7614,7 @@ Auth Section
 }
 
 .custom--modal .modal-content {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border-radius: 5px !important;
     border: none !important;
 }
@@ -7678,7 +7678,7 @@ Auth Section
     font-size: 1.25rem;
     display: flex;
     height: 25px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -8168,7 +8168,7 @@ Auth Section
     font-weight: 500;
     position: sticky;
     left: 0;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     z-index: 9;
     width: 300px;
     flex: unset;
@@ -8692,7 +8692,7 @@ span.select2-selection.select2-selection--single {
     min-width: 130px;
     padding: 0px;
     top: 12px !important;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border-color: hsl(var(--black) / 0.1);
 }
 
@@ -8730,7 +8730,7 @@ span.select2-selection.select2-selection--single {
 
 .dropdown--lang.style-two .dropdown-toggle:hover,
 .dropdown--lang.style-two .dropdown-toggle:focus {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .dropdown--lang.style-two .dropdown-menu {
@@ -9300,7 +9300,7 @@ thead.sliding-header td {
     font-size: 1.25rem;
     display: flex;
     height: 25px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     align-items: center;
     justify-content: center;
     border-radius: 50%;
@@ -9510,7 +9510,7 @@ thead.sliding-header td {
 
 .auth-divide-text {
     padding-inline: 8px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     font-size: 1rem;
     font-weight: 500;
     color: hsl(var(--black) / 0.4);
@@ -9571,7 +9571,7 @@ a.h-45 {
     left: 50%;
     width: 280px;
     background-color: #1a1a1a;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     padding: 20px;
     border-radius: 5px;
     transform: translateX(-50%);
@@ -9650,7 +9650,7 @@ a.h-45 {
     height: 55px;
     border-radius: 50%;
     background-color: #6e6f70;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
     font-size: 32px;
     display: inline-flex;
     justify-content: center;
@@ -9739,7 +9739,7 @@ table.table.print-payment-table tbody tr td {
     gap:4px;
     background:#DD4637;
     border-radius:3px;
-    color:white;
+    color: hsl(var(--base));
     font-weight:500;
     transition:.3s;
 }
@@ -9785,7 +9785,7 @@ table.table.print-payment-table tbody tr td {
     gap:4px;
     background:#557DBF;
     border-radius:3px;
-    color:white;
+    color: hsl(var(--base));
     font-weight:500;
     transition:.3s;
 }
@@ -10051,7 +10051,7 @@ table.table.print-payment-table tbody tr td {
     right: 6px;
     height: 20px;
     width: 20px;
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     border-radius: 50%;
     display: grid;
     place-content: center;
@@ -10070,7 +10070,7 @@ table.table.print-payment-table tbody tr td {
 
 .header-bottom .ecommerce__icon {
     font-size: 30px;
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 .header-bottom .ecommerce__text {
@@ -10078,7 +10078,7 @@ table.table.print-payment-table tbody tr td {
 }
 
 .header-bottom .ecommerce__is {
-    background-color: hsl(var(--white));
+    background-color: hsl(var(--base));
     color: hsl(var(--base));
     top: 3px;
     right: 8px;
@@ -10099,7 +10099,7 @@ table.table.print-payment-table tbody tr td {
 }
 
 .header-bottom .user-account span {
-    color: hsl(var(--white));
+    color: hsl(var(--base));
 }
 
 
