@@ -24,7 +24,7 @@
 
                     @foreach ($headerThree->group as $key => $group)
                         @if ($key == 'category_widget' && isset($group->status) && $group->status == 'on')
-                            <div class="d-none d-lg-block view-category-wrapper">
+                            <div class="view-category-wrapper">
                                 <div class="view-category">
                                     <div class="menu-category-btn" @if (@$group->background_color) style="background-color: {{ '#' . $group->background_color }}" @endif>
                                         <x-svg.category-icon />
@@ -38,7 +38,7 @@
                             </div>
                         @elseif($key == 'links')
                             @include('Template::partials.menu.site_menu', [
-                                'classes' => 'd-none d-lg-flex',
+                                'classes' => 'd-flex',
                             ])
                         @endif
 
@@ -112,6 +112,72 @@
 
         .menu li a.active {
             background-color: #ffffff33;
+        }
+
+        @media (max-width: 991px) {
+            /* .header-bottom-wrapper {
+                flex-direction: column !important;
+                gap: 15px !important;
+                margin-left: 15px !important;
+            } */
+
+            .view-category-wrapper {
+                width: 100%;
+                order: 1;
+            }
+
+            .view-category {
+                width: 100%;
+            }
+
+            .menu-category-btn {
+                width: 100%;
+                padding: 12px 15px !important;
+            }
+
+            .category-dropdown-menu {
+                position: static !important;
+                display: block !important;
+                width: 100% !important;
+                background: transparent !important;
+                border: none !important;
+                box-shadow: none !important;
+                max-height: 300px;
+                overflow-y: auto;
+            }
+
+            .menu {
+                flex-direction: row !important;
+                gap: 0 !important;
+                order: 2;
+            }
+
+            .menu li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .menu li a {
+                padding: 12px 15px !important;
+                display: block !important;
+            }
+
+            .action-btn-inner {
+                flex-wrap: wrap !important;
+                gap: 10px !important;
+                order: 3;
+                width: 100%;
+            }
+
+            .action-btn-inner > div {
+                flex: 1 1 calc(50% - 5px) !important;
+                min-width: 120px;
+            }
+
+            .primary-menu-button {
+                order: -1;
+                margin-right: auto;
+            }
         }
     </style>
 @endpush

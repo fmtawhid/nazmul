@@ -14,6 +14,7 @@
             background-color: transparent;
             backdrop-filter: blur(10px);
             transition: all 0.3s ease;
+            padding: 5px 0;
         }
 
         .header-middle:hover {
@@ -53,7 +54,7 @@
                                 
                                 @foreach ($widgets as $widget)
                                     @if (gs('product_compare') && $widget->key == 'compare' && @$widget->status == 'on')
-                                        <li class="d-none d-lg-block">
+                                        <li>
                                             <a href="{{ route('compare.all') }}" class="ecommerce">
                                                 <span class="ecommerce__icon">
                                                     <i class="las la-exchange-alt"></i>
@@ -65,7 +66,7 @@
                                     @endif
 
                                     @if (gs('product_wishlist') && $widget->key == 'wishlist' && @$widget->status == 'on')
-                                        <li class="d-none d-lg-block">
+                                        <li>
                                             <a href="javascript:void(0)" class="ecommerce wish-button">
                                                 <span class="ecommerce__icon">
                                                     <i class="las la-heart"></i>
@@ -98,13 +99,13 @@
                                     @endif
 
                                     @if ($widget->key == 'user_auth' && @$widget->status == 'on')
-                                        <li class="d-none d-lg-block">
+                                        <li>
                                             @include('Template::partials.user_auth_options')
                                         </li>
                                     @endif
 
                                     @if ($widget->key == 'language' && @$widget->status == 'on')
-                                        <li class="d-none d-lg-block">
+                                        <li>
                                             @include($activeTemplate . 'partials.menu.language_menu')
                                         </li>
                                     @endif

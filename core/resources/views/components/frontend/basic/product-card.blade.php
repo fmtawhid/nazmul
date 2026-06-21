@@ -19,13 +19,13 @@
         <ul class="product-card-buttons">
             
         @if (gs('product_compare'))
-            <li class="product-compare-btn">
+            <!-- <li class="product-compare-btn">
                 @if (!Route::is('compare.page'))
                     <button type="button" @class(['addToCompare', 'active' => checkCompareList($product->id)]) data-id="{{ $product->id }}">
                         <i class="las la-exchange-alt"></i>
                     </button>
                 @endif
-            </li>
+            </li> -->
         @endif
         @if (gs('product_wishlist'))
             <li class="product-wishlist-btn">

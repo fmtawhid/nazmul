@@ -1,48 +1,20 @@
 @php
     $sliders = getContent('banner.element');
-    $sliders1 = getContent('banner1.content');
-    $sliders2 = getContent('banner2.content');
 @endphp
 
-<div class="container">
-    <div class="row gy-3">
-        <!-- Slider Section -->
-        <div class="col-lg-12 col-md-12">
-            @if ($sliders->isNotEmpty())
-                <div class="slider-wrapper overflow-hidden rounded--5 w-100 h-100">
-                    <div class="banner-slider owl-theme owl-carousel">
-                        @foreach ($sliders as $slider)
-                            <div class="slide-item">
-                                <a href="{{ @$slider->data_values->link }}" class="d-block w-100">
-                                    <img src="{{ frontendImage('banner', @$slider->data_values->slider, '990x480') }}" alt="slider-image" class="img-fluid w-100 rounded-3">
-                                </a>
-                            </div>
-                        @endforeach
-                    </div>
+@if ($sliders->isNotEmpty())
+    <div class="slider-wrapper overflow-hidden w-100">
+        <div class="banner-slider owl-theme owl-carousel">
+            @foreach ($sliders as $slider)
+                <div class="slide-item">
+                    <a href="{{ @$slider->data_values->link }}" class="d-block w-100">
+                        <img src="{{ frontendImage('banner', @$slider->data_values->slider, '1920x1080') }}" alt="slider-image" class="img-fluid w-100">
+                    </a>
                 </div>
-            @endif
+            @endforeach
         </div>
-
-        <!-- Banner Section 1 & 2 stacked vertically on all screens -->
-        <!-- <div class="col-lg-4 col-md-12 d-flex flex-column gap-3">
-            @if ($sliders1->isNotEmpty())
-                <div class="banner-item overflow-hidden rounded--5 w-100">
-                    <a href="{{ @$sliders1->first()->data_values->link }}" class="d-block w-100">
-                        <img src="{{ frontendImage('banner1', @$sliders1->first()->data_values->banner_image, '400x240') }}" alt="{{ $sliders1->first()->data_values->banner_heading }}" class="img-fluid w-100 rounded-3">
-                    </a>
-                </div>
-            @endif
-
-            @if ($sliders2->isNotEmpty())
-                <div class="banner-item overflow-hidden rounded--5 w-100">
-                    <a href="{{ @$sliders2->first()->data_values->link }}" class="d-block w-100">
-                        <img src="{{ frontendImage('banner2', @$sliders2->first()->data_values->banner_image, '400x240') }}" alt="{{ $sliders2->first()->data_values->banner_heading }}" class="img-fluid w-100 rounded-3">
-                    </a>
-                </div>
-            @endif
-        </div> -->
     </div>
-</div>
+@endif
 
 @push('script')
     <script>
@@ -62,25 +34,46 @@
 
 @push('style')
     <style>
+        body, html {
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
         .banner-item img, .slide-item img {
             object-fit: cover;
             height: 100%;
+            width: 100%;
+            display: block;
         }
 
-        @media (max-width: 991px) {
-            .slider-wrapper {
-                height: auto !important;
-            }
+        .slider-wrapper {
+            width: 100vw !important;
+            height: 100vh !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            position: relative !important;
+            left: 50% !important;
+            right: 50% !important;
+            margin-left: -50vw !important;
+            margin-right: -50vw !important;
+            z-index: 1;
         }
 
-        @media (min-width: 992px) {
-            .slider-wrapper {
-                height: 500px !important;
-            }
+        .banner-slider {
+            height: 100%;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
 
-            .banner-item {
-                height: 240px !important;
-            }
+        .slide-item {
+            height: 100%;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+
+        .slide-item a {
+            height: 100%;
+            display: block;
         }
     </style>
 @endpush

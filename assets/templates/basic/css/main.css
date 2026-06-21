@@ -2058,11 +2058,11 @@ a.dropdown-menu__item:last-child {
 }
 
 .widget {
-    background: black;
+    background: #F4F0EA;
     padding: 20px;
     border-radius: 5px;
     margin-bottom: 20px;
-    border: 1px solid hsl(var(--border));
+    border: 1px solid var(--base);
 }
 
 .widget .title {
@@ -2244,7 +2244,7 @@ a.dropdown-menu__item:last-child {
 
 .filter-category li a {
     padding: 3px 15px 10px 0;
-    color: rgb(207, 202, 202);
+    color: hsl(var(--base));
     display: block;
     font-size: 14px;
 }
@@ -7614,7 +7614,7 @@ Auth Section
 }
 
 .custom--modal .modal-content {
-    background-color: hsl(var(--base));
+    /* background-color: hsl(var(--base)); */
     border-radius: 5px !important;
     border: none !important;
 }
