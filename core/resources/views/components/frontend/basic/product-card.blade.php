@@ -135,13 +135,13 @@
                 {{-- ── Buy Now ─────────────────────── --}}
                 @if ($product->productVariants->count())
                     {{-- VARIABLE product --}}
-                    <button class="quickViewBtn buy-now-btn" {{-- ◀ no .addToCart --}} data-product="{{ $product->slug }}">
+                    <button class="quickViewBtn buy-now-btn" data-product="{{ $product->slug }}">
                         <i class="las la-shopping-bag"></i> @lang('Buy Now')
                     </button>
                 @else
                     {{-- SIMPLE product --}}
                     <input type="hidden" name="quantity" value="1">
-                    <button type="button" class="addToCart buy-now-btn" {{-- ◀ both classes --}}
+                    <button type="button" class="addToCart buy-now-btn"
                         data-id="{{ $product->id }}" data-product_type="{{ $product->product_type }}">
                         <i class="las la-shopping-bag"></i> @lang('Buy Now')
                     </button>

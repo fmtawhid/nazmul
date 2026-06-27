@@ -65,3 +65,43 @@
         </div>
     </div>
 @endsection
+
+@push('style')
+    <style>
+        .auth-form {
+            background-color: #F4F0EA;
+            color: #22211D;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 10px 30px rgba(34, 33, 29, 0.08);
+        }
+
+        .auth-form .form--label,
+        .auth-form .form-check-label,
+        .auth-form .text-muted,
+        .auth-form a,
+        .auth-form p {
+            color: #22211D;
+        }
+
+        .auth-form .form--control,
+        .auth-form .form-control {
+            background-color: #F4F0EA;
+            color: #22211D;
+            border: 1px solid rgba(34, 33, 29, 0.2);
+        }
+
+        .auth-form .form--control::placeholder,
+        .auth-form .form-control::placeholder {
+            color: rgba(34, 33, 29, 0.6);
+        }
+
+        .auth-form .form--control:focus,
+        .auth-form .form-control:focus {
+            background-color: #F4F0EA;
+            color: #22211D;
+            border-color: #22211D;
+            box-shadow: 0 0 0 0.2rem rgba(34, 33, 29, 0.12);
+        }
+    </style>
+@endpush

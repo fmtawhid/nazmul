@@ -811,6 +811,33 @@ $('#areaSelect').on('change', function () {
             border-color: hsl(var(--primary));
         }
 
+        .shipping-method-item .form-check-input,
+        .payment-method-item .form-check-input {
+            border-color: #1f1f1f;
+            background-color: #fff;
+            box-shadow: none;
+            width: 16px;
+            height: 16px;
+            cursor: pointer;
+        }
+
+        .shipping-method-item .form-check-input:focus,
+        .payment-method-item .form-check-input:focus,
+        .shipping-method-item .form-check-input:focus-visible,
+        .payment-method-item .form-check-input:focus-visible {
+            outline: none;
+            // box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.16);
+            border-color: #111;
+            background-color: #fff;
+        }
+
+        .shipping-method-item .form-check-input:checked,
+        .payment-method-item .form-check-input:checked {
+            background-color: hsl(var(--primary));
+            // border-color: hsl(var(--primary));
+            // box-shadow: inset 0 0 0 3px #fff;
+        }
+
         .shipping-method-label {
             display: flex;
             justify-content: space-between;
